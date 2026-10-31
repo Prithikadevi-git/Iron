@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dumbbell, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { InstagramIcon, YouTubeIcon, TwitterIcon, LinkedInIcon } from './SocialIcons';
 
 export const Footer: React.FC = () => {
@@ -22,17 +22,17 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
           {/* Brand Column (Columns 1-4) */}
           <div className="lg:col-span-4 space-y-5">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-gold-300 to-gold-600 p-[1px] shadow-gold-sm">
-                <div className="w-full h-full bg-dark-950 rounded-[7px] flex items-center justify-center">
-                  <Dumbbell className="w-4 h-4 text-gold-400 transform -rotate-45" />
-                </div>
-              </div>
-              <span className="font-display font-extrabold text-2xl tracking-[0.16em] text-white">
-                IRON<span className="text-gold-400">FORGE</span>
-              </span>
-            </div>
-
+            <a
+  href="#home"
+  aria-label="IRONFORGE Home"
+  className="inline-flex items-center"
+>
+  <img
+    src="/iron.png"
+    alt="IRONFORGE Performance Club"
+    className="h-14 sm:h-16 w-auto object-contain"
+  />
+</a>
             <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed max-w-sm">
               The pinnacle of human physical engineering. Designed for athletes, lifters, and leaders dedicated to uncompromising self-mastery.
             </p>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Dumbbell, ChevronRight, Phone } from 'lucide-react';
+import { Menu, X, ChevronRight, Phone } from 'lucide-react';
 
 interface NavbarProps {
   onOpenJoinModal: (plan?: string) => void;
@@ -79,25 +79,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenJoinModal, onOpenTourModal
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
-              href="#home"
-              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
-              aria-label="IRONFORGE Home"
-            >
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-gold-300 via-gold-400 to-gold-600 flex items-center justify-center p-[1px] shadow-gold-sm transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
-                <div className="w-full h-full bg-dark-950 rounded-[7px] flex items-center justify-center">
-                  <Dumbbell className="w-4 h-4 sm:w-5 sm:h-5 text-gold-400 transform -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                </div>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display font-extrabold text-lg sm:text-2xl tracking-[0.14em] sm:tracking-[0.15em] text-white flex items-center leading-none">
-                  IRON<span className="text-gold-400">FORGE</span>
-                </span>
-                <span className="text-[8px] sm:text-[9px] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-zinc-400 font-medium mt-0.5 sm:mt-1">
-                  Performance Club
-                </span>
-              </div>
-            </a>
+<a
+  href="#home"
+  className="flex items-center focus:outline-none"
+  aria-label="IRONFORGE Home"
+>
+  <img
+    src="/iron.png"
+    alt="IRONFORGE Performance Club"
+    className="h-12 sm:h-14 w-auto object-contain"
+  />
+</a>
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
